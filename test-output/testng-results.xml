@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-24T04:46:15Z" name="Suite" finished-at="2022-08-24T04:46:32Z" duration-ms="16208">
+    <groups>
+    </groups>
+    <test started-at="2022-08-24T04:46:15Z" name="UAT" finished-at="2022-08-24T04:46:32Z" duration-ms="16100">
+      <class name="script.ValidSignUp">
+        <test-method is-config="true" signature="createReport()[pri:0, instance:script.ValidSignUp@1be2019a]" started-at="2022-08-24T04:46:15Z" name="createReport" finished-at="2022-08-24T04:46:15Z" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createReport -->
+        <test-method is-config="true" signature="openApp(java.lang.reflect.Method, java.lang.String)[pri:0, instance:script.ValidSignUp@1be2019a]" started-at="2022-08-24T04:46:15Z" name="openApp" finished-at="2022-08-24T04:46:28Z" duration-ms="12473" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void script.ValidSignUp.testValidSignUp() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[uat.properties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="testValidSignUp()[pri:0, instance:script.ValidSignUp@1be2019a]" started-at="2022-08-24T04:46:28Z" name="testValidSignUp" finished-at="2022-08-24T04:46:31Z" duration-ms="3367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidSignUp -->
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.ValidSignUp@1be2019a]" started-at="2022-08-24T04:46:31Z" name="closeApp" finished-at="2022-08-24T04:46:32Z" duration-ms="246" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidSignUp status=SUCCESS method=ValidSignUp.testValidSignUp()[pri:0, instance:script.ValidSignUp@1be2019a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method is-config="true" signature="publishReport()[pri:0, instance:script.ValidSignUp@1be2019a]" started-at="2022-08-24T04:46:32Z" name="publishReport" finished-at="2022-08-24T04:46:32Z" duration-ms="319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- publishReport -->
+      </class> <!-- script.ValidSignUp -->
+    </test> <!-- UAT -->
+    <test started-at="2022-08-24T04:46:15Z" name="Stage" finished-at="2022-08-24T04:46:32Z" duration-ms="16208">
+      <class name="script.ValidSignUp">
+        <test-method is-config="true" signature="openApp(java.lang.reflect.Method, java.lang.String)[pri:0, instance:script.ValidSignUp@5e7cd6cc]" started-at="2022-08-24T04:46:15Z" name="openApp" finished-at="2022-08-24T04:46:26Z" duration-ms="10353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void script.ValidSignUp.testValidSignUp() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[stage.properties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="testValidSignUp()[pri:0, instance:script.ValidSignUp@5e7cd6cc]" started-at="2022-08-24T04:46:26Z" name="testValidSignUp" finished-at="2022-08-24T04:46:31Z" duration-ms="5216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidSignUp -->
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.ValidSignUp@5e7cd6cc]" started-at="2022-08-24T04:46:31Z" name="closeApp" finished-at="2022-08-24T04:46:32Z" duration-ms="624" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidSignUp status=SUCCESS method=ValidSignUp.testValidSignUp()[pri:0, instance:script.ValidSignUp@5e7cd6cc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- script.ValidSignUp -->
+    </test> <!-- Stage -->
+  </suite> <!-- Suite -->
+</testng-results>
