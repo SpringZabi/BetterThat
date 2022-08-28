@@ -20,28 +20,28 @@ public class ValidSignUp extends CommonBaseTest {
 		String password = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 3);
 		
 		SignUpPage signuppage = new SignUpPage(driver);
-		signuppage.signupJoinClick();
+		signuppage.signupJoinMouseOver();
 		signuppage.joinClick();
 		Thread.sleep(1000);
 		boolean status1 = signuppage.verifySignUpPopUpDisplay();
 		if (status1) {
-		extentTest.log(Status.INFO, "SingUp pop is displaying properly");
+		extentTest.log(Status.INFO, "SingUp pop-up loaded properly");
 		}
 		else {
-		extentTest.log(Status.INFO, "SignUp pop is not opening");
+		extentTest.log(Status.INFO, "SignUp pop-up is not opening");
 		}
 		
 		signuppage.enterEmail(email);
-		extentTest.log(Status.INFO, "enterEmail:"+email);
+		extentTest.log(Status.INFO, "Email:  "+email);
 		
 		signuppage.enterFirstName(firstname);
-		extentTest.log(Status.INFO, "enterFirstName:"+firstname);
+		extentTest.log(Status.INFO, "FirstName:  "+firstname);
 		
 		signuppage.enterLastName(lastname);
-		extentTest.log(Status.INFO, "enterLastName"+lastname);
+		extentTest.log(Status.INFO, "LastName:  "+lastname);
 		
 		signuppage.enterPassword(password);
-		extentTest.log(Status.INFO, "enterPassword"+password);
+		extentTest.log(Status.INFO, "Password:  "+password);
 		
 		signuppage.clickTandC();
 //		Thread.sleep(2000);

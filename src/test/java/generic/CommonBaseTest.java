@@ -101,16 +101,16 @@ public class CommonBaseTest implements IAutoConstant{
 		String strITO = BTUtility.getProperty(configPath,"ITO");
 		int iITO=Integer.parseInt(strITO);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(iITO));
-		extentTest.log(Status.INFO, "Set the ITO:"+iITO);
+		//extentTest.log(Status.INFO, "Set the ITO:"+iITO);
 		
 		String strETO = BTUtility.getProperty(configPath,"ETO");
 		int iETO=Integer.parseInt(strETO);
 		wait=new WebDriverWait(driver, Duration.ofSeconds(iETO));
-		extentTest.log(Status.INFO, "Set the ETO:"+iETO);
+		//extentTest.log(Status.INFO, "Set the ETO:"+iETO);
 				
 		String appURL = BTUtility.getProperty(configPath,"APPURL");
 		driver.get(appURL);
-		extentTest.log(Status.INFO, "Enter the URL:"+appURL);
+		extentTest.log(Status.INFO, "Testing Environment :"+appURL);
 		driver.manage().window().maximize();
 	}
 	

@@ -2,13 +2,14 @@ package page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SignUpPage {
 	
-	@FindBy(xpath="//span[text()='SIGN IN / JOIN']") 
+	@FindBy(xpath="//div/ul/li[@class='Header_dropNav__Vl3dA links']") 
 	private WebElement Singup_Join_Link;
 	
 	@FindBy(xpath="//span[text()='JOIN']")
@@ -43,12 +44,18 @@ public class SignUpPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void signupJoinClick() {
+	public void signupJoinMouseOver() {
 		Singup_Join_Link.click();
+//		Actions action = new Actions(driver);
+//		action.moveToElement(Singup_Join_Link).perform();
+//		action.click().perform();
 	}
 	
 	public void joinClick() {
 		Join_Link.click();
+//		Actions action = new Actions(driver);
+//		action.moveToElement(Join_Link).click();
+//		action.click();
 	}
 	
 	public boolean verifySignUpPopUpDisplay() {

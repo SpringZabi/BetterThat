@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Jisha\eclipse-workspace\bt-automation\testngSignUp.xml</span>
+                    <span>C:\Users\Jisha\git\BetterThat\testngSignUp.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,26 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="script.ValidSignUp" class="method navigator-link" hash-for-method="testValidSignUp">testValidSignUp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="script.ValidSignUp" class="method navigator-link" hash-for-method="testValidSignUp">testValidSignUp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,9 +122,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">script.ValidSignUp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -133,6 +133,31 @@
                   <a name="testValidSignUp">
                   </a> <!-- testValidSignUp -->
                   <span class="method-name">testValidSignUp</span>
+                  <div class="stack-trace">org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: Origin element is not displayed
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;LAPTOP-RI7JP09I&apos;, ip: &apos;192.168.0.106&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2589f557-7758-4693-a7bd-301ba1c45235, actions {actions=[org.openqa.selenium.interactions.Sequence@248abe23]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:debuggerAddress: localhost:54360, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 24420, moz:profile: C:\Users\Jisha\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54360/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2589f557-7758-4693-a7bd-301ba1c45235
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:615)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
+	at page.SignUpPage.joinClick(SignUpPage.java:56)
+	at script.ValidSignUp.testValidSignUp(ValidSignUp.java:24)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 21 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -140,14 +165,22 @@
                   <a name="testValidSignUp">
                   </a> <!-- testValidSignUp -->
                   <span class="method-name">testValidSignUp</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test is Failed: Recheck the entered details on sign up page again
+	at script.ValidSignUp.testValidSignUp(ValidSignUp.java:56)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Jisha\eclipse-workspace\bt-automation\testngSignUp.xml</span>
+            <span class="header-content">C:\Users\Jisha\git\BetterThat\testngSignUp.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -216,16 +249,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testValidSignUp')
 data.setCell(0, 2, 'script.ValidSignUp')
-data.setCell(0, 3, 5216);
+data.setCell(0, 3, 13235);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testValidSignUp')
 data.setCell(1, 2, 'script.ValidSignUp')
-data.setCell(1, 3, 3367);
+data.setCell(1, 3, 2227);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -257,32 +290,36 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">openApp(public void script.ValidSignUp.testValidSignUp() throws java.lang.InterruptedException, uat.properti...)</span>
-                <span class="method-start">254 ms</span>
+                <span class="method-name">openApp(public void script.ValidSignUp.testValidSignUp() throws java.lang.InterruptedException, stage.proper...)</span>
+                <span class="method-start">376 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">openApp(public void script.ValidSignUp.testValidSignUp() throws java.lang.InterruptedException, stage.proper...)</span>
-                <span class="method-start">254 ms</span>
+                <span class="method-name">openApp(public void script.ValidSignUp.testValidSignUp() throws java.lang.InterruptedException, uat.properti...)</span>
+                <span class="method-start">376 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testValidSignUp</span>
-                <span class="method-start">10607 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testValidSignUp</span>
-                <span class="method-start">12727 ms</span>
+                <span class="method-start">7928 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeApp([TestResult name=testValidSignUp status=SUCCESS method=ValidSignUp.testValidSignUp()[pri:0, instance...)</span>
-                <span class="method-start">15827 ms</span>
+                <span class="method-name">closeApp([TestResult name=testValidSignUp status=FAILURE method=ValidSignUp.testValidSignUp()[pri:0, instance...)</span>
+                <span class="method-start">10173 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testValidSignUp</span>
+                <span class="method-start">13384 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeApp([TestResult name=testValidSignUp status=SUCCESS method=ValidSignUp.testValidSignUp()[pri:0, instance...)</span>
-                <span class="method-start">16096 ms</span>
+                <span class="method-name">closeApp([TestResult name=testValidSignUp status=FAILURE method=ValidSignUp.testValidSignUp()[pri:0, instance...)</span>
+                <span class="method-start">26622 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">publishReport</span>
-                <span class="method-start">16462 ms</span>
+                <span class="method-start">27611 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
