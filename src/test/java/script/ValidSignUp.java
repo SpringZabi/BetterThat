@@ -11,8 +11,10 @@ import page.SignUpPage;
 
 public class ValidSignUp extends CommonBaseTest {
 
-	@Test
+	@Test(priority = 2)
 	public void testValidSignUp() throws InterruptedException {
+		
+		//System.out.println("ValidSignUp class executing.............................");
 		
 		String email = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 0);
 		String firstname = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 1);
@@ -44,7 +46,7 @@ public class ValidSignUp extends CommonBaseTest {
 		extentTest.log(Status.INFO, "Password:  "+password);
 		
 		signuppage.clickTandC();
-//		Thread.sleep(2000);
+		Thread.sleep(2000);
 		signuppage.clickSingUpBtn();
 		
 		Thread.sleep(500);
@@ -53,7 +55,7 @@ public class ValidSignUp extends CommonBaseTest {
 		extentTest.log(Status.INFO, "Test is passed: Please check your email and press the activation link.");
 		}
 		else {
-	    Assert.fail("Test is Failed: Recheck the entered details on sign up page again");
+	    Assert.fail("Test is Failed: Recheck the entered details on sign up page again.  Sucessful signup message is not getting displayed");
 		}
 		
 	}

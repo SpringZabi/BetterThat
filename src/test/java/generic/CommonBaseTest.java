@@ -46,14 +46,14 @@ public class CommonBaseTest implements IAutoConstant{
 	@Parameters({"property"})
 	@BeforeMethod
 	public void openApp(Method testMethod,@Optional("stage.properties") String property) {
-		String configPath=ENV_FOLDER+property;
+		String configPath=ENV_FOLDER+property; //env folder set up done for stage and uat environment
 		
 		String testName=testMethod.getName(); //dependency injection - which test method is going to execute next will predict
+		System.out.println("Test Name 1: "+testName);
 		extentTest = EXTENTREPORTS.createTest(testName); // create report for that test
 		
 		String gird = BTUtility.getProperty(configPath,"GRID");
 		extentTest.log(Status.INFO, "Use Grid to Execute?"+gird);
-		
 		
 		String browser = BTUtility.getProperty(configPath,"BROWSER");
 		extentTest.log(Status.INFO, "Browser is:"+browser);
@@ -101,12 +101,12 @@ public class CommonBaseTest implements IAutoConstant{
 		String strITO = BTUtility.getProperty(configPath,"ITO");
 		int iITO=Integer.parseInt(strITO);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(iITO));
-		//extentTest.log(Status.INFO, "Set the ITO:"+iITO);
+		extentTest.log(Status.INFO, "Set the ITO:"+iITO);
 		
 		String strETO = BTUtility.getProperty(configPath,"ETO");
 		int iETO=Integer.parseInt(strETO);
 		wait=new WebDriverWait(driver, Duration.ofSeconds(iETO));
-		//extentTest.log(Status.INFO, "Set the ETO:"+iETO);
+		extentTest.log(Status.INFO, "Set the ETO:"+iETO);
 				
 		String appURL = BTUtility.getProperty(configPath,"APPURL");
 		driver.get(appURL);
@@ -123,6 +123,17 @@ public class CommonBaseTest implements IAutoConstant{
 		if(testStatus==1)
 		{
 			extentTest.log(Status.PASS, testName+" is pass");
+			/*
+			 * TakesScreenshot t=(TakesScreenshot)driver; File srcFile =
+			 * t.getScreenshotAs(OutputType.FILE); File dstFile = new
+			 * File(SCREENSHOT_FOLDER+testName+IMAGE_FORMAT); try {
+			 * FileUtils.copyFile(srcFile, dstFile); } catch (Exception e) {
+			 * 
+			 * extentTest.log(Status.FAIL, e.getMessage()); }
+			 * extentTest.addScreenCaptureFromPath(SCREENSHOT_FOLDER_FOR_REPORT+testName+
+			 * IMAGE_FORMAT); String msg=result.getThrowable().getMessage();
+			 * extentTest.log(Status.FAIL, msg);
+			 */
 		}
 		else
 		{

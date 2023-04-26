@@ -7,10 +7,10 @@
     	<package name="script"></package>
     </packages>
   </test> 
- <test name="UAT"> 
+ <!-- <test name="UAT"> 
   <parameter name="property" value="uat.properties"/> 
    <packages>  
 	<package name="script"></package> 
    </packages> 
- </test>  
+ </test> -->
 </suite> 

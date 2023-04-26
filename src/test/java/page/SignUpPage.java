@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SignUpPage {
 	
-	@FindBy(xpath="//div/ul/li[@class='Header_dropNav__Vl3dA links']") 
+	@FindBy(xpath="//span[@class='Header_userNameClass__nl8jn']") 
 	private WebElement Singup_Join_Link;
 	
 	@FindBy(xpath="//span[text()='JOIN']")
@@ -33,15 +33,23 @@ public class SignUpPage {
 	@FindBy(xpath="//label[@class='custom-check']/span[@class='checkmark']")
 	private WebElement TandC_CB;
 	
-	@FindBy(xpath="//span[text()='Sign me Up']/..")
+	@FindBy(xpath="//form//button[@class='RegisterLogin_btnCustom__Yndqo']")
 	private WebElement SingMeUpBtn;
 	
-	@FindBy(xpath="/html//div[@id='join-in']/div[@class='modal-dialog modal-dialog-centered']//div[@class='Message_cupponMessage__DRXZ6 Message_success__acHdN']")
+	@FindBy(xpath="//div/h2[contains(text(),'Thanks for registering!')]")
 	private WebElement activationtxt;
 	String emailtxt;
 	
+	@FindBy(xpath="//*[@id=\"join-in\"]/div/div/button")
+	private WebElement CloseBtn;
+	
 	public SignUpPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void validateClose() {
+		
+		CloseBtn.click();
 	}
 	
 	public void signupJoinMouseOver() {
@@ -64,6 +72,10 @@ public class SignUpPage {
 		{
 			Singuptxt = Singup_Text.getText();
 			System.out.println("Sing-Up Pop up displayed with "+ Singuptxt+ " Heading");
+			//System.out.println("Clicking close button in the SignUp PopUp");
+			//Thread.sleep(3000);
+			//CloseBtn.click();
+			//System.out.println("SignUp PopUp Close button clicked");
 			return true;
 		}
 		catch (Exception e) 
@@ -91,17 +103,19 @@ public class SignUpPage {
     }
     public void clickSingUpBtn() {
     	SingMeUpBtn.click();
+    	//System.out.println("Button clicked: "+SingMeUpBtn.getText());
     }
     public boolean verifyActivationEmail() {
     	try {
     		emailtxt = activationtxt.getText();
     		System.out.println("SignUp successful... and Text " + emailtxt + " is getting displayed");
-    		if(emailtxt.equals("Please check your email and press the activation link.")) {
+    		//emailtxt.contains("Thanks for registering!");
+    		if(emailtxt.equals("Thanks for registering! Please check your email and click on the activation link.")) {
     			System.out.println("Passed");
     			return true;
     		}
     		else {
-    			System.out.println("Email verification text is not getting displayed to the customer");
+    			System.out.println("Test case Failed: Email verification text is not getting displayed to the customer");
     			return false;
     		}
     	}

@@ -15,18 +15,4 @@
       </class> <!-- script.ValidSignUp -->
     </classes>
   </test> <!-- Stage(failed) -->
-  <test thread-count="5" parallel="tests" name="UAT(failed)">
-    <parameter name="property" value="uat.properties"/>
-    <classes>
-      <class name="script.ValidSignUp">
-        <methods>
-          <include name="closeApp"/>
-          <include name="publishReport"/>
-          <include name="createReport"/>
-          <include name="openApp"/>
-          <include name="testValidSignUp"/>
-        </methods>
-      </class> <!-- script.ValidSignUp -->
-    </classes>
-  </test> <!-- UAT(failed) -->
 </suite> <!-- Failed suite [Suite] -->
