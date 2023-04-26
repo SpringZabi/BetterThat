@@ -16,11 +16,6 @@ public class ValidSignUp extends CommonBaseTest {
 		
 		//System.out.println("ValidSignUp class executing.............................");
 		
-		String email = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 0);
-		String firstname = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 1);
-		String lastname = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 2);
-		String password = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 3);
-		
 		SignUpPage signuppage = new SignUpPage(driver);
 		signuppage.signupJoinMouseOver();
 		signuppage.joinClick();
@@ -32,6 +27,11 @@ public class ValidSignUp extends CommonBaseTest {
 		else {
 		extentTest.log(Status.INFO, "SignUp pop-up is not opening");
 		}
+		
+		String email = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 0);
+		String firstname = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 1);
+		String lastname = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 2);
+		String password = BTExcel.getCellData(INPUTXL_PATH, "BTSingUp",1, 3);
 		
 		signuppage.enterEmail(email);
 		extentTest.log(Status.INFO, "Email:  "+email);
