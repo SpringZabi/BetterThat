@@ -55,7 +55,7 @@ public class ValidSignUp extends CommonBaseTest {
 		extentTest.log(Status.INFO, "Test is passed: Please check your email and press the activation link.");
 		}
 		else {
-	    Assert.fail("Test is Failed: Recheck the entered details on sign up page again.  Sucessful signup message is not getting displayed");
+	   Assert.fail("Test is Failed: Recheck the entered details on sign up page again.  Sucessful signup message is not getting displayed");
 		}
 		
 	}

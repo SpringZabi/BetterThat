@@ -13,4 +13,5 @@ public interface IAutoConstant {
  String IMAGE_FORMAT =".png";
  String SCREENSHOT_FOLDER_FOR_REPORT="./../screenshot/";
  String INPUTXL_PATH="./data/BTSignUp.xlsx";
+ String INPUTXL_PATH2="./data/BTInvalidSignUp.xlsx";
 }

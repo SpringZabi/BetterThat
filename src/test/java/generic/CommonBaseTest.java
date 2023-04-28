@@ -124,10 +124,12 @@ public class CommonBaseTest implements IAutoConstant{
 		{
 			extentTest.log(Status.PASS, testName+" is pass");
 			/*
-			 * TakesScreenshot t=(TakesScreenshot)driver; File srcFile =
-			 * t.getScreenshotAs(OutputType.FILE); File dstFile = new
-			 * File(SCREENSHOT_FOLDER+testName+IMAGE_FORMAT); try {
-			 * FileUtils.copyFile(srcFile, dstFile); } catch (Exception e) {
+			 * TakesScreenshot t=(TakesScreenshot)driver; 
+			 *  File srcFile = t.getScreenshotAs(OutputType.FILE);
+			 *  File dstFile = new File(SCREENSHOT_FOLDER+testName+IMAGE_FORMAT);
+			 *  try {
+			 * FileUtils.copyFile(srcFile, dstFile); } 
+			 * catch (Exception e) {
 			 * 
 			 * extentTest.log(Status.FAIL, e.getMessage()); }
 			 * extentTest.addScreenCaptureFromPath(SCREENSHOT_FOLDER_FOR_REPORT+testName+

@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-25T13:21:20Z" name="Default suite" finished-at="2023-04-25T13:21:59Z" duration-ms="39567">
+  <suite started-at="2023-04-28T02:56:29Z" name="Default suite" finished-at="2023-04-28T02:56:51Z" duration-ms="22862">
     <groups>
     </groups>
-    <test started-at="2023-04-25T13:21:20Z" name="Default test" finished-at="2023-04-25T13:21:59Z" duration-ms="39567">
-      <class name="script.ValidSignUp">
-        <test-method is-config="true" signature="createReport()[pri:0, instance:script.ValidSignUp@7daa0fbd]" started-at="2023-04-25T13:21:19Z" name="createReport" finished-at="2023-04-25T13:21:20Z" duration-ms="243" status="PASS">
+    <test started-at="2023-04-28T02:56:29Z" name="Default test" finished-at="2023-04-28T02:56:51Z" duration-ms="22862">
+      <class name="script.InvalidSignUp">
+        <test-method is-config="true" signature="createReport()[pri:0, instance:script.InvalidSignUp@7daa0fbd]" started-at="2023-04-28T02:56:28Z" name="createReport" finished-at="2023-04-28T02:56:29Z" duration-ms="256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createReport -->
-        <test-method is-config="true" signature="openApp(java.lang.reflect.Method, java.lang.String)[pri:0, instance:script.ValidSignUp@7daa0fbd]" started-at="2023-04-25T13:21:20Z" name="openApp" finished-at="2023-04-25T13:21:51Z" duration-ms="31457" status="PASS">
+        <test-method is-config="true" signature="openApp(java.lang.reflect.Method, java.lang.String)[pri:0, instance:script.InvalidSignUp@7daa0fbd]" started-at="2023-04-28T02:56:29Z" name="openApp" finished-at="2023-04-28T02:56:40Z" duration-ms="11209" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void script.ValidSignUp.testValidSignUp() throws java.lang.InterruptedException]]>
+                <![CDATA[public void script.InvalidSignUp.testInvalidSignUp() throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
@@ -27,26 +27,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="testValidSignUp()[pri:2, instance:script.ValidSignUp@7daa0fbd]" started-at="2023-04-25T13:21:51Z" name="testValidSignUp" finished-at="2023-04-25T13:21:58Z" duration-ms="7247" status="PASS">
+        <test-method signature="testInvalidSignUp()[pri:3, instance:script.InvalidSignUp@7daa0fbd]" started-at="2023-04-28T02:56:40Z" name="testInvalidSignUp" finished-at="2023-04-28T02:56:51Z" duration-ms="10796" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidSignUp -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.ValidSignUp@7daa0fbd]" started-at="2023-04-25T13:21:58Z" name="closeApp" finished-at="2023-04-25T13:21:59Z" duration-ms="840" status="PASS">
+        </test-method> <!-- testInvalidSignUp -->
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.InvalidSignUp@7daa0fbd]" started-at="2023-04-28T02:56:51Z" name="closeApp" finished-at="2023-04-28T02:56:51Z" duration-ms="837" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testValidSignUp status=SUCCESS method=ValidSignUp.testValidSignUp()[pri:2, instance:script.ValidSignUp@7daa0fbd] output={null}]]]>
+                <![CDATA[[TestResult name=testInvalidSignUp status=SUCCESS method=InvalidSignUp.testInvalidSignUp()[pri:3, instance:script.InvalidSignUp@7daa0fbd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="publishReport()[pri:0, instance:script.ValidSignUp@7daa0fbd]" started-at="2023-04-25T13:21:59Z" name="publishReport" finished-at="2023-04-25T13:22:00Z" duration-ms="877" status="PASS">
+        <test-method is-config="true" signature="publishReport()[pri:0, instance:script.InvalidSignUp@7daa0fbd]" started-at="2023-04-28T02:56:51Z" name="publishReport" finished-at="2023-04-28T02:56:52Z" duration-ms="872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publishReport -->
-      </class> <!-- script.ValidSignUp -->
+      </class> <!-- script.InvalidSignUp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

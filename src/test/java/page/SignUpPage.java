@@ -1,11 +1,14 @@
 package page;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SignUpPage {
 	
@@ -43,8 +46,67 @@ public class SignUpPage {
 	@FindBy(xpath="//*[@id=\"join-in\"]/div/div/button")
 	private WebElement CloseBtn;
 	
+	@FindBy(xpath="//form//div[@class='Message_textDanger___OSCV ']")
+	private WebElement Errorlist;
+	
+	@FindAll(@FindBy(how = How.XPATH, using = "//form//div[@class='Message_textDanger___OSCV ']"))
+    private List<WebElement> elements;
+	
 	public SignUpPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+	
+	public String[] validagteBlankErrorMsg() {
+		//System.out.println("First error list size: "+elements.size());
+		String blanktxterr =null;
+		String[] strAr = new String[4];
+		for(int j=0;j<elements.size();j++)
+		{
+			blanktxterr = elements.get(j).getText();
+			strAr[j]=blanktxterr;
+		//	System.out.println("list of error messages: "+blanktxterr);
+		}
+		
+		if(strAr[0].equals("Email field is required") && (strAr[1]).equals("First name field is required"))
+		{
+			
+			System.out.println("Showing proper validation messages ................Success!!!!!!");
+	    	
+	    }
+		else
+		{
+			System.out.println("The validation is not displaying properly");
+			Arrays.fill(strAr, null);
+		}
+		return strAr;
+	}
+	
+	public String[] validateErrorMsg()
+	{
+		System.out.println("Entered to validateErrorMsg method...........................................................");
+		System.out.println("list size: "+elements.size());
+		String errortxt = null;
+		String[] strAr3= new String[3];
+		for(int i=0;i<elements.size();i++) {
+			
+			errortxt = elements.get(i).getText();
+			strAr3[i] = errortxt;
+		    System.out.println("list of error messages: "+i+"="+errortxt);
+		    
+		}
+		
+		if(strAr3[0].equals("Email address must be a valid email") && (strAr3[1]).equals("First name field may only contain alphabetic characters"))
+		{
+			
+			System.out.println("Showing proper validation message ................Success!!!!!!");
+	    	
+	    }
+		else
+		{
+			System.out.println("The validation is not displaying properly");
+			Arrays.fill(strAr3, null);
+		}
+		return strAr3;
 	}
 	
 	public void validateClose() {
@@ -108,19 +170,19 @@ public class SignUpPage {
     public boolean verifyActivationEmail() {
     	try {
     		emailtxt = activationtxt.getText();
-    		System.out.println("SignUp successful... and Text " + emailtxt + " is getting displayed");
+    		//System.out.println("SignUp successful... and Text " + emailtxt + " is getting displayed");
     		//emailtxt.contains("Thanks for registering!");
     		if(emailtxt.equals("Thanks for registering! Please check your email and click on the activation link.")) {
-    			System.out.println("Passed");
+    			//System.out.println("Passed");
     			return true;
     		}
     		else {
-    			System.out.println("Test case Failed: Email verification text is not getting displayed to the customer");
+    			//System.out.println("Test case Failed: Email verification text is not getting displayed to the customer");
     			return false;
     		}
     	}
     	catch(Exception e) {
-    		System.err.println("Recheck the entered details on sign up page again: SIGNUP FAILED DUE TO INVALID DATA ENTRY");
+    		//System.err.println("Recheck the entered details on sign up page again: SIGNUP FAILED DUE TO INVALID DATA ENTRY");
     		return false;
     	}
     }
