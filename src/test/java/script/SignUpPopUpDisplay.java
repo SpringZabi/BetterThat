@@ -7,7 +7,7 @@ import com.aventstack.extentreports.Status;
 import generic.CommonBaseTest;
 import page.SignUpPage;
 
-public class SignUp extends CommonBaseTest {
+public class SignUpPopUpDisplay extends CommonBaseTest {
 	
 	@Test(priority = 1)
 	public void testSignUpPopUp() throws InterruptedException {
