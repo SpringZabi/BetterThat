@@ -1,5 +1,6 @@
 package script;
 
+import org.openqa.selenium.WindowType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,6 +8,8 @@ import com.aventstack.extentreports.Status;
 
 import generic.BTExcel;
 import generic.CommonBaseTest;
+import page.BackendCustomerPage;
+import page.BackendLoginPage;
 import page.SignUpPage;
 
 public class ValidSignUp extends CommonBaseTest {
@@ -14,9 +17,8 @@ public class ValidSignUp extends CommonBaseTest {
 	@Test(priority = 2)
 	public void testValidSignUp() throws InterruptedException {
 		
-		//System.out.println("ValidSignUp class executing.............................");
-		
 		SignUpPage signuppage = new SignUpPage(driver);
+		
 		signuppage.signupJoinMouseOver();
 		signuppage.joinClick();
 		Thread.sleep(1000);
@@ -48,14 +50,39 @@ public class ValidSignUp extends CommonBaseTest {
 		signuppage.clickTandC();
 		Thread.sleep(2000);
 		signuppage.clickSingUpBtn();
-		
-		Thread.sleep(500);
+    	Thread.sleep(500);
 		boolean status2 = signuppage.verifyActivationEmail();
 		if(status2) {
-		extentTest.log(Status.INFO, "Test is passed: Please check your email and press the activation link.");
+		extentTest.log(Status.INFO, "Test is passed. Message displayed: Please check your email and press the activation link.");
+			
+//		driver.switchTo().newWindow(WindowType.TAB);    
+//        driver.get("https://dev.betterthat.com/login");   //Open new browser
+//        Thread.sleep(1000);
+//		driver.manage().window().maximize();
+//		
+//        BackendLoginPage blp = new BackendLoginPage(driver);
+// //       BackendCustomerPage bcp = new BackendCustomerPage(driver);
+//        
+//		System.out.println("Open a new window..................");
+//		blp.enterBackendEmail("sreeja+admin@springdigital.com.au");
+//		
+//		System.out.println("Entered username.................");
+//		
+//		blp.enterBackendPw("testers@SD");
+//		
+//		System.out.println("Entered password.................");
+//		//Thread.sleep(1000);
+//		
+////		blp.loginBtnClick();
+//		System.out.println("Backend login button clicked");
+//		Thread.sleep(1000);
+////		bcp.clickCustomer();
+//		
+//		//driver.findElement(By.linkText("")).click(); 
+		
 		}
 		else {
-	   Assert.fail("Test is Failed: Recheck the entered details on sign up page again.  Sucessful signup message is not getting displayed");
+	    Assert.fail("Test is Failed: Recheck the entered details on sign up page again.  Sucessful signup message is not getting displayed");
 		}
 		
 	}
