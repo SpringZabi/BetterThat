@@ -22,6 +22,10 @@ public class SignInPage {
 	@FindBy(xpath="//*[@id=\"sign-in\"]//button[@class='RegisterLogin_btnCustom__Yndqo overcastBtn']")
 	private WebElement LogInBtn;
 	
+	@FindBy(xpath="//div[@class='Message_textDanger___OSCV ']")
+	private WebElement emailvalidationtxt;
+	
+	
 	public SignInPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -46,6 +50,23 @@ public class SignInPage {
 	public void btnClick() {
 		LogInBtn.click();
 	}
+	public String emailerrortxt;
+	public boolean validateemailerror() {
+		
+		emailerrortxt = emailvalidationtxt.getText();
+		System.out.println("Incorrect email text is : "+emailerrortxt);
+		
+		if(emailerrortxt.equals("Enter email address in correct format, like name@example.com.")) {
+			
+			return true;
+			
+		}
+		else
+		{
+			return false;
+		}
+		
+	}
+	}
 	
-	
-}
+
